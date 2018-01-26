@@ -177,8 +177,28 @@ public class Picture extends SimplePicture
   public void yasuoFilter(int startRow, int startCol)
   {
 	  Pixel fromPixel = null;
-	  Pixel toPixel null;
+	  Pixel toPixel = null;
 	  Picture yasuo = new Picture("yasuo.png");
+	  Pixel [][] toPixels = this.getPixels2D(); //The base layer of the picture.
+	  Pixel [][] fromPixels = yasuo.getPixels2D(); // The layer we are adding to the picture.
+	  int fromRow = 0;
+	  for (int toRow = startRow; fromRow < fromPixels.length && toRow < toPixels.length; toRow++)
+	  {
+		  int fromCol = 0;
+		  for (int toCol = startCol; fromCol < fromPixels[0].length && toCol < toPixels[0].length; toCol++)
+		  {
+			  fromPixel = fromPixels[fromRow][fromCol];
+			  toPixel = toPixels[toRow][toCol];
+			  if(!fromPixel.isTransparent())
+			  {
+				  toPixel.setColor(fromPixel.getColor());
+			  }
+			  fromCol++;
+		  }
+		  
+		  
+		  fromRow++;
+	  }
   }
 
   /** Method to create a collage of several pictures */
