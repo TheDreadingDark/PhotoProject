@@ -173,6 +173,13 @@ public class Picture extends SimplePicture
       }
     }   
   }
+  
+  public void yasuoFilter(int startRow, int startCol)
+  {
+	  Pixel fromPixel = null;
+	  Pixel toPixel null;
+	  Picture yasuo = new Picture("yasuo.png");
+  }
 
   /** Method to create a collage of several pictures */
   public void createCollage()
