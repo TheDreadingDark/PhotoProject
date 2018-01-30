@@ -181,6 +181,7 @@ public class Picture extends SimplePicture
 	  Picture yasuo = new Picture("yasuo.png");
 	  Pixel [][] toPixels = this.getPixels2D(); //The base layer of the picture.
 	  Pixel [][] fromPixels = yasuo.getPixels2D(); // The layer we are adding to the picture.
+	
 	  int fromRow = 0;
 	  for (int toRow = startRow; fromRow < fromPixels.length && toRow < toPixels.length; toRow++)
 	  {
@@ -191,12 +192,12 @@ public class Picture extends SimplePicture
 			  toPixel = toPixels[toRow][toCol];
 			  if(!fromPixel.isTransparent())
 			  {
-				  toPixel.setColor(fromPixel.getColor());
+				  toPixel.setRed(fromPixel.getRed());
+				  toPixel.setBlue(fromPixel.getBlue());
+				  toPixel.setGreen(fromPixel.getGreen());
 			  }
 			  fromCol++;
 		  }
-		  
-		  
 		  fromRow++;
 	  }
   }
