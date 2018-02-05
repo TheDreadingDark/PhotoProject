@@ -44,6 +44,11 @@ public class PictureTester
     temple.explore();
   }
   
+  public static void testGlitch()
+  {
+	  
+  }
+  
   /** Method to test the collage method */
   public static void testCollage()
   {
@@ -67,7 +72,7 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-	testYasuo();
+	//testYasuo();
     //testZeroBlue();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
