@@ -46,7 +46,10 @@ public class PictureTester
   
   public static void testGlitch()
   {
-	  
+	  Picture sample = new Picture("beach.jpg");
+	  sample.explore();
+	  sample.glitchFilter();
+	  sample.explore();
   }
   
   /** Method to test the collage method */
@@ -72,6 +75,7 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
+	  testGlitch();
 	//testYasuo();
     //testZeroBlue();
     //testKeepOnlyBlue();
