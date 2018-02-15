@@ -75,7 +75,7 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-	  testGlitch();
+	testGlitch();
 	//testYasuo();
     //testZeroBlue();
     //testKeepOnlyBlue();

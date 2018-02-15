@@ -163,6 +163,7 @@ public class Picture extends SimplePicture
 			  pixels[row][col].setColor(currentColors[(col + shiftAmount) % width]);
 		  }
 	  }
+	  
   }
   
   /** copy from the passed fromPic to the
